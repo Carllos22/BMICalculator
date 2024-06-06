@@ -4,5 +4,5 @@
 
     <string name="main_activity_click_button">Púlsame</string>
     <string name="main_activity_welcome_text">Bienvenido a mi primera aplicación</string>
-    <string name="main_activity_welcome_text">Haz hecho click en el botón</string>
+    <string name="main_activity_clicked_button">Haz hecho click en el botón</string>
 </resources>

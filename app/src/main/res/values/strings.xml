@@ -3,5 +3,5 @@
 
     <string name="main_activity_click_button">Click</string>
     <string name="main_activity_welcome_text">Welcome to my first App</string>
-    <string name="main_activity_welcome_text">Click button</string>
+    <string name="main_activity_cliked_button">Clicked button</string>
 </resources>

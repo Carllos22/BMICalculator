@@ -1,36 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="9dp">
+
+        <!--Modificacion del numero en cm -->
+
+    <EditText
+        android:id="@+id/heightEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text="0"
+        android:layout_weight="1"/>
+
+        <!--CM-->
 
     <TextView
-        android:id="@+id/welcomeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/main_activity_welcome_text"
-        android:textColor="@color/brown"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="cm"
+        android:textSize="34sp"/>
 
-    <Button
-        android:id="@+id/clickButton"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:layout_margin="40dp"
-        android:text="@string/main_activity_click_button"
-        android:textSize="40dp"
-        android:textColor="@color/yellow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeTextView"
-        app:layout_constraintVertical_bias="0.0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+        <!--Botón izquierdo de disminución -->
+
+        <Button
+            android:id="@+id/minusButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?attr/materialIconButtonFilledStyle"
+            app:icon="@drawable/ic_minus"
+            />
+
+        <!--Zona en KG por modificar -->
+
+        <TextView
+            android:id="@+id/weightTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0 Kg"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:layout_weight="1"/>
+
+        <!--Botón derecho de incrementar -->
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?attr/materialIconButtonFilledStyle"
+            app:icon="@drawable/ic_add"/>
+
+    </LinearLayout>
+
+    <!--Botón de resultado -->
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Resultado"
+        tools:textSize="30sp"
+        android:layout_gravity="center_horizontal"/>
+
+    <!--Resultado en decimales -->
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="00.00"
+            android:textSize="30sp"
+            android:layout_gravity="center_horizontal"/>
+
+    <!--Botón de calcular -->
+
+        <Button
+            android:id="@+id/calcutateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calcular"
+            android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
